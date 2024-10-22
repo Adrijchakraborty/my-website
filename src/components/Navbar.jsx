@@ -1,14 +1,38 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { RxHamburgerMenu } from "react-icons/rx";
+import Responsive from './Navbar/Responsive'
 
-const Navbar = () => {
+const Navbar = ({ value }) => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [clicked, setClicked] = useState(false)
+
+
+  let custom_color = value <= 20 ? 'bg-slate-950 text-white' : 'bg-slate-100 text-slate-950';
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const handleClick = () => {
+    setClicked(prev => !prev)
+  }
+  console.log(clicked)
   return (
-    <div className='fixed w-full bg-slate-950 text-white flex justify-between px-4 py-3'>
+    <div className='fixed w-full'>
+      <div className={` transition ${custom_color} flex justify-between px-4 py-3`}>
         <h1 className='tracking-[0.5vw] font-roboto-slab text-4xl'>ADRIJ.</h1>
-        <div className='flex gap-3 items-center font-archivo'>
-            <a href="#" className='uppercase hover:text-blue-500 transition'>About me</a>
-            <a href="#" className='uppercase hover:text-blue-500 transition'>Projects</a>
-            <button className='uppercasebg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full'>Let's talk</button>
-        </div>
+
+        {windowWidth < 600 ? <span className='flex justify-center items-center'><RxHamburgerMenu onClick={handleClick} className='text-3xl cursor-pointer' /></span> : <Responsive />}
+
+      </div>
+      {clicked && <div className={`${custom_color} h-screen flex justify-center items-center slide-in`}><Responsive windowWidth={windowWidth} /></div>}
     </div>
   )
 }
