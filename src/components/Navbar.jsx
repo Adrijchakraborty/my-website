@@ -4,10 +4,10 @@ import Responsive from './Navbar/Responsive'
 
 const Navbar = ({ value }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [clicked, setClicked] = useState(false)
+  const [clicked, setClicked] = useState(false);
 
+  let custom_color = value <= 20 ? 'bg-[#101010] text-white' : 'bg-slate-100 text-slate-950';
 
-  let custom_color = value <= 20 ? 'bg-slate-950 text-white' : 'bg-slate-100 text-slate-950';
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
   };
@@ -21,20 +21,30 @@ const Navbar = ({ value }) => {
   }, []);
 
   const handleClick = () => {
-    setClicked(prev => !prev)
+    setClicked(prev => !prev);
   }
+
   console.log(clicked)
+
   return (
     <div className='fixed w-full'>
-      <div className={` transition ${custom_color} flex justify-between px-4 py-3`}>
+      <div className={`transition ${custom_color} flex justify-between px-4 py-3`}>
         <h1 className='tracking-[0.5vw] font-roboto-slab text-4xl'>ADRIJ.</h1>
 
-        {windowWidth < 600 ? <span className='flex justify-center items-center'><RxHamburgerMenu onClick={handleClick} className='text-3xl cursor-pointer' /></span> : <Responsive />}
-
+        {windowWidth < 600 ? (
+          <span className='flex justify-center items-center'>
+            <RxHamburgerMenu onClick={handleClick} className='text-3xl cursor-pointer' />
+          </span>
+        ) : (
+          <Responsive />
+        )}
       </div>
-      {clicked && <div className={`${custom_color} h-screen flex justify-center items-center slide-in`}><Responsive windowWidth={windowWidth} /></div>}
+
+      <div className={`${custom_color} h-screen flex justify-center items-center ${clicked ? 'slide-in' : 'slide-out'}`}>
+        <Responsive windowWidth={windowWidth} />
+      </div>
     </div>
   )
 }
 
-export default Navbar
+export default Navbar;

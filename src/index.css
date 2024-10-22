@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Arima:wght@100..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -20,19 +20,28 @@
       "wdth" 100;
   }
 
-.slide-in {
-    animation: myAnim 0.4s linear 0s 1 alternate forwards;
-}
+  .font-roboto-condensed {
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+  }
 
+  .font-arima {
+    font-family: "Arima", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
 
-@keyframes myAnim {
-	0% {
-		opacity: 0;
-		transform: translateY(-250px);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
+  .slide-in {
+    transform: translateX(0); 
+    opacity: 1;
+    transition: transform 0.5s, opacity 0.5s;
+  }
+  
+  .slide-out {
+    transform: translateX(100%); 
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+  }

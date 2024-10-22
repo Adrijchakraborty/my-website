@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Hero, Navbar } from './components'
+import { About, Hero, Navbar } from './components'
 
 const App = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -18,9 +18,10 @@ const App = () => {
   }, []);
 
   return (
-    <div className=''>
+    <div className='bg-[#101010]'>
       <Navbar value={scrollPosition}/>
       <Hero/>
+      <About/>
     </div>
   )
 }
