@@ -12,7 +12,7 @@ const About = () => {
           <p className='text-slate-400 text-lg py-5 px-3 md:px-10 font-arima'>
             Hi, I'm Adrij Chakraborty, a software development enthusiast from Kolkata. I completed my schooling at Jadavpur Vidyapith and currently I'm pursuing my degree at Techno Main Saltlake, specializing in Electronics and Communication Engineering. <br />
 
-            I've gained experience with programming languages like JavaScript, HTML/CSS, and Node.js, as well as databases like MongoDB. My projects include web apps for estate management and real-time messaging platforms using Socket.io. <br />
+            I've gained experience with programming languages like JavaScript, HTML/CSS,React js and Node.js, as well as databases like MongoDB. My projects include web apps for estate management and real-time messaging platforms using Socket.io. <br />
 
             In my free time, I enjoy gaming, reading books, and listening to music. I'm always open to collaborating on new ideas and projects. Let's connect!
 
