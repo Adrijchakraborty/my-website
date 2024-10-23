@@ -27,7 +27,7 @@ const Navbar = ({ value }) => {
   console.log(clicked)
 
   return (
-    <div className='fixed w-full'>
+    <div className='fixed w-full z-[9999]'>
       <div className={`transition ${custom_color} flex justify-between px-4 py-3`}>
         <h1 className='tracking-[0.5vw] font-roboto-slab text-4xl'>ADRIJ.</h1>
 
@@ -36,11 +36,11 @@ const Navbar = ({ value }) => {
             <RxHamburgerMenu onClick={handleClick} className='text-3xl cursor-pointer' />
           </span>
         ) : (
-          <Responsive />
+          <Responsive/>
         )}
       </div>
 
-      <div className={`${custom_color} h-screen flex justify-center items-center ${clicked ? 'slide-in' : 'slide-out'}`}>
+      <div onClick={handleClick} className={`${custom_color} h-screen absolute w-full flex justify-center items-center ${clicked ? 'slide-in' : 'slide-out'}`}>
         <Responsive windowWidth={windowWidth} />
       </div>
     </div>

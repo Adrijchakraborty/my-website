@@ -4,6 +4,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  transition: all 0.5s;
+}
+
 .font-roboto-slab {
     font-family: "Roboto Slab", serif;
     font-optical-sizing: auto;
@@ -45,3 +53,14 @@
     opacity: 0;
     transition: transform 0.5s, opacity 0.5s;
   }
+
+  .line-right:after {
+    position: absolute;
+    content: '';
+    width: 50%;
+    height: 5%;
+    background: #fff;
+    left: 0px;
+    bottom: -10px;
+   opacity: 0.25;
+}

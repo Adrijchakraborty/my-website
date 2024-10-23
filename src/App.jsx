@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { About, Hero, Navbar } from './components'
+import { About, Footer, Hero, Navbar, Projects, Skills, Vision } from './components'
 
 const App = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -22,6 +22,10 @@ const App = () => {
       <Navbar value={scrollPosition}/>
       <Hero/>
       <About/>
+      <Projects/>
+      <Skills/>
+      <Vision/>
+      <Footer/>
     </div>
   )
 }
