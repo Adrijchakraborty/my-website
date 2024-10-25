@@ -3,31 +3,51 @@ import contactData from './Contact/contact'
 
 const Contact = () => {
   return (
-    <div className='flex min-h-[70vh]'>
-      <div className='flex flex-col justify-center pl-5 text-white min-w-[50%]'>
+    <div id='contact' className='flex flex-col-reverse md:flex-row py-20 bg-white text-black'>
+      <div className='flex flex-col justify-center pl-[10%] pt-8 md:pt-0 md:pl-5 md:min-w-[50%]'>
         <h1 className='text-5xl font-roboto'>Get in touch</h1>
         <p className='text-xl font-sans'>follow me on socials</p>
-        <div className='flex gap-3'>
-        {contactData.map((data,index)=>{
-          return (
-            <span key={index} className='text-xl transition cursor-pointer hover:text-slate-500'>
-              {data.icon}
-            </span>
-          )
-        })}
+        <div className='flex pt-3 gap-3'>
+          {contactData.map((data, index) => {
+            return (
+              <span key={index} className='text-xl transition cursor-pointer hover:text-slate-500'>
+                {data.icon}
+              </span>
+            )
+          })}
+        </div>
       </div>
-      </div>
-      <div>
-        <form className='flex flex-col'>
-          <div className='flex'>
-            <label htmlFor="input">Name</label>
-          <input type="text" placeholder='first name' className='px-2 py-1 rounded-md'/>
-          <input type="text" placeholder='last name' className='px-2 py-1 rounded-md'/>
+      <div className='flex flex-col justify-center items-center w-full'>
+        <form className='flex gap-8 flex-col w-[80%]'>
+          <div className='flex gap-6'>
+            <div className='w-full'>
+              <label htmlFor="first-name" className="block text-md font-semibold leading-6">First name</label>
+              <input type="text" id='first-name' placeholder='first name' className='px-2 py-1 rounded-md focus:outline-none focus:border-blue-500 w-full border-2 border-slate-200' />
+            </div>
+            <div className='w-full'>
+              <label htmlFor="last-name" className="block text-md font-semibold leading-6">Last name</label>
+              <input type="text" placeholder='last name' id='last-name' className='px-2 py-1 rounded-md focus:outline-none focus:border-blue-500 w-full border-2 border-slate-200' />
+            </div>
           </div>
-          <input type="email" placeholder='email' className='px-2 py-1 rounded-md'/>
-          <input type="number" placeholder='phone number' className='px-2 py-1 rounded-md'/>
-          <textarea placeholder='enter your message' className=''></textarea>
+          <div>
+            <label htmlFor="email" className="block text-md font-semibold leading-6">Email</label>
+            <input type="email" id='email' placeholder='email' className='px-2 py-1 rounded-md focus:outline-none focus:border-blue-500 w-full border-2 border-slate-200' />
+          </div>
+          <div>
+            <label htmlFor="Phone" className="block text-md font-semibold leading-6">Phone Number</label>
+            <input type="number" id='Phone' placeholder='phone number' className='px-2 py-1 rounded-md focus:outline-none focus:border-blue-500 w-full border-2 border-slate-200' />
+          </div>
+          <div>
+            <label htmlFor="message" className="block text-md font-semibold leading-6">Message</label>
+            <textarea placeholder='enter your message' id='message' rows={5} className='p-2 focus:outline-none focus:border-blue-500 rounded-md w-full border-2 border-slate-200'></textarea>
+          </div>
+
+          <div className='flex justify-end w-full'>
+            <button type='submit' className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 capitalize -mt-5'>send message</button>
+          </div>
+
         </form>
+
       </div>
     </div>
   )

@@ -13,7 +13,7 @@ const Skills = () => {
     setTooltip({ visible: false, text: '' });
   };
   return (
-    <div>
+    <div className='pb-10'>
       <h2 className="px-3 text-[#5a5a5a] text-[40px] md:text-[80px] lg:text-[120px] xl:text-[120px] font-bold opacity-25 select-none pointer-events-none line-right relative uppercase"> Skills</h2>
 
       <div className='flex flex-col md:flex-row text-white'>

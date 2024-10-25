@@ -10,7 +10,12 @@ html {
 
 body {
   transition: all 0.5s;
+  
 }
+
+/* *{
+  outline: 2px solid rgb(255, 48, 48);
+} */
 
 .font-roboto-slab {
     font-family: "Roboto Slab", serif;
