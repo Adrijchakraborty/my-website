@@ -2,7 +2,12 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <div className='flex justify-between text-white'>
+      <div>
+        <p>Made by Adrij Chakraborty</p>
+      </div>
+      
+    </div>
   )
 }
 

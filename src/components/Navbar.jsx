@@ -24,7 +24,6 @@ const Navbar = ({ value }) => {
     setClicked(prev => !prev);
   }
 
-  console.log(clicked)
 
   return (
     <div className='fixed w-full z-[9999]'>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Arima:wght@100..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Arima:wght@100..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -42,6 +42,12 @@ body {
     font-style: normal;
   }
 
+  .font-roboto {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+
   .slide-in {
     transform: translateX(0); 
     opacity: 1;
@@ -82,3 +88,24 @@ body {
   display: block;
   width: 100%;
 }
+
+.tooltip {
+  position: absolute;
+  bottom: 100%; /* Position above the icon */
+  left: 50%;
+  transform: translateX(-50%) translateY(10px); /* Initially off-screen */
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Transition for smooth effect */
+  pointer-events: none; /* Prevents mouse events */
+  white-space: nowrap; /* Prevents wrapping */
+}
+
+.relative:hover .tooltip {
+  transform: translateX(-50%) translateY(0); /* Move to visible position */
+  opacity: 1; /* Fully visible */
+}
+
