@@ -114,3 +114,6 @@ body {
   opacity: 1; /* Fully visible */
 }
 
+.bg-img {
+  background: center / cover no-repeat url('./assets/contact-bg.jpg');
+}

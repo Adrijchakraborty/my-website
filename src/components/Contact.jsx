@@ -3,21 +3,21 @@ import contactData from './Contact/contact'
 
 const Contact = () => {
   return (
-    <div id='contact' className='flex flex-col-reverse md:flex-row py-20 bg-white text-black'>
-      <div className='flex flex-col justify-center pl-[10%] pt-8 md:pt-0 md:pl-5 md:min-w-[50%]'>
+    <div id='contact' className='flex flex-col-reverse md:flex-row'>
+      <div className='py-20 flex flex-col justify-center pl-[10%] pt-8 md:pt-0 md:pl-5 md:min-w-[50%] text-white bg-img'>
         <h1 className='text-5xl font-roboto'>Get in touch</h1>
         <p className='text-xl font-sans'>follow me on socials</p>
         <div className='flex pt-3 gap-3'>
           {contactData.map((data, index) => {
             return (
-              <span key={index} className='text-xl transition cursor-pointer hover:text-slate-500'>
-                {data.icon}
+              <span key={index} className='text-xl transition hover:text-slate-500'>
+                <a href={data.link} target='_blank'>{data.icon}</a>
               </span>
             )
           })}
         </div>
       </div>
-      <div className='flex flex-col justify-center items-center w-full'>
+      <div className='py-20 bg-[#030303] text-white flex flex-col justify-center items-center w-full'>
         <form className='flex gap-8 flex-col w-[80%]'>
           <div className='flex gap-6'>
             <div className='w-full'>
