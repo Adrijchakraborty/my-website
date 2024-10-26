@@ -17,7 +17,7 @@ const Contact = () => {
   const [isSuccess, setIsSuccess] = useState(false);
   const [result, setResult] = useState(null);
 
-  const accessKey = "c3e7aec5-5b70-4b78-ac63-b2035654e2db";
+  const accessKey = import.meta.env.VITE_ACCESS_KEY;
 
   const { submit: onSubmit } = useWeb3Forms({
     access_key: accessKey,
