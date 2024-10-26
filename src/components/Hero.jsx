@@ -1,8 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { IoMdDownload } from "react-icons/io";
 import Resume from "../assets/Resume.pdf"
 
+import { ToastContainer, toast,Bounce } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
+
 const Hero = () => {
+  useEffect(() => {
+    toast.warn('This is not my picture...i will update it really sooooon', {
+      position: "bottom-center",
+      autoClose: 10000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      transition: Bounce,
+    });
+  }, [])
   return (
     <div className='flex flex-col md:flex-row gap-14 md:gap-0 items-center justify-center text-white h-screen px-10'>
       <div className='min-w-[50%] flex flex-col justify-center items-center gap-3'>

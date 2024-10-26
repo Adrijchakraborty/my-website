@@ -16,7 +16,7 @@ import { EffectCoverflow, Pagination } from 'swiper/modules';
 
 
 
-export default function App() {
+const Slider = () => {
     return (
         <>
             <Swiper
@@ -37,8 +37,8 @@ export default function App() {
             >
                 <SwiperSlide>
                     <div className='bg-white text-black flex flex-col gap-4 justify-center items-center h-full w-full rounded-lg'>
-                        <h1 className='uppercase text-3xl font-roboto-slab'>swipe right</h1>
-                        <FaArrowRight className='text-3xl' />
+                        <h1 className='uppercase text-3xl font-roboto-slab'>swipe left</h1>
+                        <FaArrowLeft className='text-3xl' />
                     </div>
                 </SwiperSlide>
                 {projects.map((project, index) => {
@@ -57,11 +57,13 @@ export default function App() {
                 })}
                 <SwiperSlide>
                     <div className='bg-white text-black flex flex-col gap-4 justify-center items-center h-full w-full rounded-lg border-2 border-black'>
-                        <h1 className='uppercase text-3xl font-roboto-slab'>swipe left</h1>
-                        <FaArrowLeft className='text-3xl' />
+                        <h1 className='uppercase text-3xl font-roboto-slab'>swipe right</h1>
+                        <FaArrowRight className='text-3xl' />
                     </div>
                 </SwiperSlide>
             </Swiper>
         </>
     );
 }
+
+export default Slider;

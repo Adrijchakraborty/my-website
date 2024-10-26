@@ -22,9 +22,8 @@ const Contact = () => {
   const { submit: onSubmit } = useWeb3Forms({
     access_key: accessKey,
     settings: {
-      from_name: "Acme Inc",
-      subject: "New Contact Message from your Website",
-      // ... other settings
+      from_name: "Portfolio",
+      subject: "New Message from Website",
     },
     onSuccess: (msg, data) => {
       setIsSuccess(true);
@@ -45,6 +44,17 @@ const Contact = () => {
     onError: (msg, data) => {
       setIsSuccess(false);
       setResult(msg);
+      toast.error('Error occured', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Bounce,
+        });
     },
   });
   return (
