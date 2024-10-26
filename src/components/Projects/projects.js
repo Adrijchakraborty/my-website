@@ -1,7 +1,7 @@
-import Project1 from "../../assets/Project-1.jpg"
-import Project2 from "../../assets/Project-2.jpg"
-import Project3 from "../../assets/Project-3.jpg"
-import Project4 from "../../assets/Project-4.jpg"
+import Project1 from "../../assets/Projects/Project-1.jpg"
+import Project2 from "../../assets/Projects/Project-2.jpg"
+import Project3 from "../../assets/Projects/Project-3.jpg"
+import Project4 from "../../assets/Projects/Project-4.jpg"
 
 const projects = [
     {

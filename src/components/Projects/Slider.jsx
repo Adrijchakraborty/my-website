@@ -45,7 +45,7 @@ export default function App() {
                     return (
                         <SwiperSlide key={index}>
                             <div className='bg-slate-200 h-full rounded-lg'>
-                                <img src={project.Image} className='min-h-[70%] border-4 border-black'/>
+                                <img src={project.Image} className='min-h-[70%] border-4 border-black' alt='Project'/>
                                 <h1 className='text-center font-roboto-slab text-lg'>{project.Name}</h1>
                                 <div className='flex justify-around font-arima'>
                                     <a href={project?.Live} target='_blank' className={`${project.Live &&"text-blue-600 hover:underline transition"}`} >Live</a>
