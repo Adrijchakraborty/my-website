@@ -17,6 +17,11 @@ body {
   outline: 2px solid rgb(255, 48, 48);
 } */
 
+::selection {
+  background-color: white;
+  color: black;
+}
+
 .font-roboto-slab {
     font-family: "Roboto Slab", serif;
     font-optical-sizing: auto;
