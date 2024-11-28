@@ -35,12 +35,7 @@ const Slider = () => {
                 modules={[EffectCoverflow, Pagination]}
                 className="mySwiper"
             >
-                <SwiperSlide>
-                    <div className='bg-white text-black flex flex-col gap-4 justify-center items-center h-full w-full rounded-lg'>
-                        <h1 className='uppercase text-3xl font-roboto-slab'>swipe left</h1>
-                        <FaArrowLeft className='text-3xl' />
-                    </div>
-                </SwiperSlide>
+                
                 {projects.map((project, index) => {
                     return (
                         <SwiperSlide key={index}>
@@ -55,12 +50,7 @@ const Slider = () => {
                         </SwiperSlide>
                     )
                 })}
-                <SwiperSlide>
-                    <div className='bg-white text-black flex flex-col gap-4 justify-center items-center h-full w-full rounded-lg border-2 border-black'>
-                        <h1 className='uppercase text-3xl font-roboto-slab'>swipe right</h1>
-                        <FaArrowRight className='text-3xl' />
-                    </div>
-                </SwiperSlide>
+                
             </Swiper>
         </>
     );

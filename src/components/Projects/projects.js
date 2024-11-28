@@ -2,8 +2,15 @@ import Project1 from "../../assets/Projects/Project-1.jpg"
 import Project2 from "../../assets/Projects/Project-2.jpg"
 import Project3 from "../../assets/Projects/Project-3.jpg"
 import Project4 from "../../assets/Projects/Project-4.jpg"
+import Project5 from "../../assets/Projects/Project-5.jpeg"
 
 const projects = [
+    {
+        "Image": Project5,
+        "Name": "Socially",
+        "Live":"https://socially-adrij.netlify.app/",
+        "Github":"https://github.com/Adrijchakraborty/Socially"
+    },
     {
         "Image": Project1,
         "Name": "Colab&Work",

@@ -1,25 +1,14 @@
 import React, { useEffect } from 'react'
 import { IoMdDownload } from "react-icons/io";
 import Resume from "../assets/Resume.pdf"
+import MyImg from "../assets/MyPhoto.jpeg"
 
 import { ToastContainer, toast,Bounce } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 
 const Hero = () => {
-  useEffect(() => {
-    toast.warn('This is not my picture...i will update it really sooooon', {
-      position: "bottom-center",
-      autoClose: 10000,
-      hideProgressBar: true,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "colored",
-      transition: Bounce,
-    });
-  }, [])
+  
   return (
     <div className='flex flex-col md:flex-row gap-14 md:gap-0 items-center justify-center text-white h-screen px-10'>
       <div className='min-w-[50%] flex flex-col justify-center items-center gap-3'>
@@ -31,7 +20,7 @@ const Hero = () => {
         </div>
       </div>
       <div>
-        <img className='rounded-full h-[35vh] md:h-[80vh]' src="https://images.unsplash.com/photo-1620399909663-b7a7da934161?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bWFuJTIwcGhvdG98ZW58MHx8MHx8fDA%3D" alt="Profile Image" />
+        <img className='rounded-full h-[35vh] md:h-[80vh]' src={MyImg} alt="Profile Image" />
       </div>
     </div>
   )
